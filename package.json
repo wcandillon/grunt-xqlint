@@ -4,7 +4,7 @@
   "description": "Grunt task for XQLint",
   "main": "./tasks/xqlint.js",
   "scripts": {
-    "test": "./test"
+    "test": "grunt"
   },
   "bugs": {
     "url": "https://github.com/wcandillon/grunt-xqlint/issues"
