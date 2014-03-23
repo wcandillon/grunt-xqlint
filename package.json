@@ -1,0 +1,43 @@
+{
+  "name": "grunt-xqlint",
+  "version": "0.0.0",
+  "description": "Grunt task for XQLint",
+  "main": "./tasks/xqlint.js",
+  "scripts": {
+    "test": "./test"
+  },
+  "bugs": {
+    "url": "https://github.com/wcandillon/grunt-xqlint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wcandillon/grunt-xqlint.git"
+  },
+  "keywords": [
+    "jsoniq",
+    "xquery",
+    "dev",
+    "cloud"
+  ],
+  "author": {
+    "name": "William Candillon",
+    "email": "w@28.io",
+    "url": "http://28.io"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2",
+      "url": "https://github.com/wcandillon/xqlint/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/wcandillon/grunt-xqlint",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "final-fs": "~1.6.0",
+    "xqlint": "0.0.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.9.2"
+  }
+}
