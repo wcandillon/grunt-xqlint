@@ -1,6 +1,6 @@
 {
   "name": "grunt-xqlint",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Grunt task for XQLint",
   "main": "./tasks/xqlint.js",
   "scripts": {

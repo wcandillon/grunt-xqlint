@@ -9,10 +9,7 @@ module.exports = function (grunt) {
         
         var options = this.options();
         var src = options.src;
-        var styleCheck = true;
-        if (typeof options.styleCheck !== 'undefined') {
-            styleCheck = options.styleCheck;
-        }
+        var styleCheck = (options.styleCheck === true);
         //p = path.resolve(path.normalize(p));
         var p = src;
         var files = [];
