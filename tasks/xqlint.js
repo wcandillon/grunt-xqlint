@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         files.forEach(function(file){
             var source = fs.readFileSync(file, 'utf-8');
             var lines = source.split('\n');
-            var linter = new XQLint(source, { styleCheck: styleCheck });
+            var linter = new XQLint(source, { styleCheck: styleCheck, fileName: file });
             var markers = linter.getMarkers();
             if(markers.length !== 0) {
                 console.log(('\n' + file).bold);
