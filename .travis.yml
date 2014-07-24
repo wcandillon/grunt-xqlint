@@ -1,5 +1,15 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
+- '0.11'
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
+deploy:
+  provider: npm
+  email: w@28.io
+  api_key:
+    secure: fgbwo+oCrxdAXqT1pyv5K2KWknPD7jH6QLa4vDiefbKcjBi5Xs3D0br2yxvBfV54x78gAed4H81le1rpBaGRtKVvBnycfP66Wj6vShdl/Z3PbXare8eS9VFIV3T2x4a2NCMUwnL00tO+0QW0XWf8vtejOimYUYpvNUUbEjnOJWI=
+  on:
+    repo: wcandillon/grunt-xqlint
+    branch: master
+    node: '0.11'
