@@ -1,6 +1,6 @@
 {
   "name": "grunt-xqlint",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "Grunt task for XQLint",
   "main": "./tasks/xqlint.js",
   "scripts": {
@@ -33,8 +33,7 @@
   "homepage": "https://github.com/wcandillon/grunt-xqlint",
   "dependencies": {
     "colors": "~0.6.2",
-    "final-fs": "~1.6.0",
-    "xqlint": "0.2.3"
+    "xqlint": "0.2.9"
   },
   "devDependencies": {
     "grunt": "~0.4.4",

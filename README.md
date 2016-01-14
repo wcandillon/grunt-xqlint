@@ -8,7 +8,7 @@ Grunt task for [XQLint](http://github.com/wcandillon/xqlint)
 grunt.initConfig({
     xqlint: {
         options: {
-            src: '/path/to/queries'
+            src: ['/path/to/queries/**/*.xq']
         },
         dist: {}
     }
