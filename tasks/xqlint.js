@@ -3,27 +3,13 @@
 module.exports = function (grunt) {
     grunt.registerMultiTask('xqlint', 'Check XQuery & JSONiq queries', function(){
         var fs = require('fs');
-        var ffs = require('final-fs');
         var XQLint = require('xqlint').XQLint;
         require('colors');
         
         var options = this.options();
-        var src = grunt.file.expand(undefined, options.src);
-        console.log(src);
-        var styleCheck = (options.styleCheck === true);
-        //p = path.resolve(path.normalize(p));
-        var p = src;
-        var files = [];
-        if(fs.statSync(p).isFile()){
-            files.push(p);
-        } else {
-            var list = ffs.readdirRecursiveSync(p, true, p);
-            list.forEach(function(file){
-                if(['jq', 'xq', 'xql'].indexOf(file.substring(file.length - 2)) !== -1) {
-                    files.push(file);
-                }
-            });
-        }
+        var files = grunt.file.expand(options.src);
+        var styleCheck = options.styleCheck === true;
+
         var errors = 0;
         var warnings = 0;
 
@@ -36,10 +22,10 @@ module.exports = function (grunt) {
         };
         files.forEach(function(file){
             var source = fs.readFileSync(file, 'utf-8');
-            var lines = source.split('\n');
             var linter = new XQLint(source, { styleCheck: styleCheck, fileName: file });
             var markers = linter.getMarkers();
-            if(markers.length !== 0) {
+            if(markers.length > 0) {
+                var lines = source.split('\n');
                 console.log(('\n' + file).bold);
                 linter.getErrors().forEach(function(error){
                     errors++;
