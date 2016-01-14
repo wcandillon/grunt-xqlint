@@ -8,7 +8,8 @@ module.exports = function (grunt) {
         require('colors');
         
         var options = this.options();
-        var src = options.src;
+        var src = grunt.file.expand(undefined, options.src);
+        console.log(src);
         var styleCheck = (options.styleCheck === true);
         //p = path.resolve(path.normalize(p));
         var p = src;
@@ -18,7 +19,7 @@ module.exports = function (grunt) {
         } else {
             var list = ffs.readdirRecursiveSync(p, true, p);
             list.forEach(function(file){
-                if(['jq', 'xq'].indexOf(file.substring(file.length - 2)) !== -1) {
+                if(['jq', 'xq', 'xql'].indexOf(file.substring(file.length - 2)) !== -1) {
                     files.push(file);
                 }
             });
