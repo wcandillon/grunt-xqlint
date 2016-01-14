@@ -33,7 +33,6 @@
   "homepage": "https://github.com/wcandillon/grunt-xqlint",
   "dependencies": {
     "colors": "~0.6.2",
-    "final-fs": "~1.6.0",
     "xqlint": "0.2.9"
   },
   "devDependencies": {
